@@ -4,7 +4,7 @@
 ---
 
 We are dependent on two or three sources for our contact confirmation, On-Air status, and web logging. 
-This basic framework and "Idea starter program" kind of exemplifies putting the control back in the operators hands if they so choose. 
+This is more of an ideological framework than an actual software framework. We're not too awesome at development. But we like to think we have some cool ideas. 
 
 ---
 
@@ -22,7 +22,6 @@ Log.xml
     - Would these servers communicate with each other and vote on the most accurate data?
 - Do we say find a way to implement ActivityPub?
 - Do we make everyone a part of a "WebRing" and source the data that way?
-
 Status.xml
 - I am wondering if current frequency, mode, and a freeform message should be added into the schema as well?
 
