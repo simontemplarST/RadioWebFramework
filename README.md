@@ -57,9 +57,15 @@ log.xml
 <Mode>
 <Name>
 <OPERATOR>
-<Pfx>
 <RST_Sent>
 <RST_Rcvd>
 <State>
 ```
 You can take the log.<filename here> And create it with what ever you'd like, as long as it's searachable, and public, showing your digital log in it's entirety. You can style it to your taste, or (eventuially) there will be templates you can use for all of the major platforms. 
+
+# Config File generator
+This generator is VERY basic and ugly. 
+- It will have the major logging software listed in the "Logging Software" dropdown. 
+    - If you would like more added please send me an email with your logging software's database backup or send me a snippet of the table structure
+- You can select where the database is located with the "Open Location" button.
+- Soon, there will be check boxes to select which additional columns you want displayed in your public web log aside from the required ones by the standard. 

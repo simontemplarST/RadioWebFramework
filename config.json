@@ -1,0 +1,17 @@
+{
+    "DBType": "sqlite3",
+    "DBPath": "./my_database.db",
+    "OnDuration": 600,
+    "PageTitle": "Database Log",
+    "PageDescription": "A log of database activity",
+    "PagePath": "./content/posts/log.md",
+    "FeedTitle": "Database Log Feed",
+    "FeedPath": "./static/log.rss",
+    "StatusTitle": "Database Status",
+    "StatusDescription": "The current status of the database",
+    "StatusPagePath": "./content/posts/status.md",
+    "StatusFeedTitle": "Database Status Feed",
+    "StatusFeedPath": "./static/status.rss",
+    "Categories": ["Database", "Log"],
+    "Tags": ["database", "log", "status"]
+  }
