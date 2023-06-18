@@ -11,14 +11,28 @@ This basic framework and starter project kind of exemplify putting the control b
 ## What is still needed?
 - We need example databases from any and all Ham Radio logging programs. 
     - Even if we say we already have them, send them in anyway. Never hurts to have multiple things to run against.
-- Development. If you are a software developer and like the idea. 
+- Development. If you are a software developer and like the idea. Follow the guidelines, and have fun! That's what the hobby is about.
+- Logging software integration
+    - If you are a developer of a logging application, and want to have this in your logger, By all means, implement it! 
 
+## Things that haven't been set in stone yet. 
+Log.xml
+- Do we use a common domain structure? like `callsign.radio`? So all we have to do is put the callsign in a var statement then slap `.radio/log.xml` on the tail?
+- Do we offload the confirming to the "Confrim" server, and put metadata in the generated files for scrapers to index? 
+    - Would these servers communicate with each other and vote on the most accurate data?
+- Do we say find a way to implement ActivityPub?
+- Do we make everyone a part of a "WebRing" and source the data that way?
+
+Status.xml
+- I am wondering if current frequency, mode, and a freeform message should be added into the schema as well?
 
 ### Guidelines
+
+
 Three files have to be generated. 
    - log.`filename here` (the operators log in it's entirety) -in the demo case, it's using a markdown file to generate a hugo post- 
-   - log.xml (RSS feed for confirming contacts) - in the future a bot script will be made available that scrapes the sites using this framework, and being a second source for confirmed contacts. This can be run by anyone. Maybe a component can be added to pull the data from these scraping servers and vote on the valid data?
-   - status.xml (To show on or off air status) I am wondering if current frequency and mode should be added into the schema as well?
+   - log.xml (RSS feed for confirming contacts)
+   - status.xml (To show on or off air status)
 
 What data creates those files? 
    - The QSL or SQL like database your logger saves to. 
