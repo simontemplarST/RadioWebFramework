@@ -4,7 +4,7 @@
 ---
 
 We are dependent on two or three sources for our contact confirmation, On-Air status, and web logging. 
-This basic framework and starter project kind of exemplify putting the control back in the operators hands if they so choose. 
+This basic framework and "Idea starter program" kind of exemplifies putting the control back in the operators hands if they so choose. 
 
 ---
 
@@ -62,26 +62,26 @@ log.xml
 ```xml
 <log>
     <entry>
-        <Call></call>
-        <QSO_Date></QSO_Date>
-        <Time_On></Time_On>
-        <Time_Off></Time_Off>
-        <Band></Band>
-        <Cont></Cont>
-        <Country></Country>
-        <DXCC></DXCC>
-        <My_Cnty></My_Cnty>
-        <CQz></CQz>
-        <Freq></Freq>
-        <My_Gridsquare></My_Gridsquare>
-        <MY_State></MY_State>
-        <ITUz></ITUz>
-        <Mode></Mode>
-        <Name></Name>
-        <OPERATOR></OPERATOR>
-        <RST_Sent></RST_Sent>
-        <RST_Rcvd></RST_Rcvd>
-        <State></State>
+        <Call>OtherStation Call</call>
+        <QSO_Date>UTC Date</QSO_Date>
+        <Time_On>UTC Time QSO Start</Time_On>
+        <Time_Off>UTC Time QSO End</Time_Off>
+        <Band>Band</Band>
+        <Cont>OtherStation Continent</Cont>
+        <Country>OtherStation Country</Country>
+        <DXCC>OtherStation Entity</DXCC>
+        <My_Cnty>My Country</My_Cnty>
+        <CQz>CQ Zone</CQz>
+        <Freq>frequency</Freq>
+        <My_Gridsquare>My Maindenhead Grid</My_Gridsquare>
+        <MY_State>My State</MY_State>
+        <ITUz>OtherStation ITU Zone</ITUz>
+        <Mode>Operating Mode</Mode>
+        <Name>OtherStation Operator Name</Name>
+        <OPERATOR>My Callsigh</OPERATOR>
+        <RST_Sent>RST Sent to OtherStation</RST_Sent>
+        <RST_Rcvd>RST from OtherStation</RST_Rcvd>
+        <State>OtherStation State</State>
     </entry>
 </log>
 
