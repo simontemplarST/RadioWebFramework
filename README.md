@@ -16,7 +16,7 @@ This basic framework and starter project kind of exemplify putting the control b
 
 ### Guidelines
 Three files have to be generated. 
-   - log.<filename here> (the operators log in it's entirety) -in the demo case, it's using a markdown file to generate a hugo post- 
+   - log.`filename here` (the operators log in it's entirety) -in the demo case, it's using a markdown file to generate a hugo post- 
    - log.xml (RSS feed for confirming contacts) - in the future a bot script will be made available that scrapes the sites using this framework, and being a second source for confirmed contacts. This can be run by anyone. Maybe a component can be added to pull the data from these scraping servers and vote on the valid data?
    - status.xml (To show on or off air status) I am wondering if current frequency and mode should be added into the schema as well?
 
@@ -72,7 +72,7 @@ log.xml
 </log>
 
 ```
-You can take the log.<filename here> And create it with what ever you'd like, as long as it's searachable, and public, showing your digital log in it's entirety. You can style it to your taste, or (eventuially) there will be templates you can use for all of the major platforms. 
+You can take the log.`filename here` And create it with what ever you'd like, as long as it's searachable, and public, showing your digital log in it's entirety. You can style it to your taste, or (eventuially) there will be templates you can use for all of the major platforms. 
 
 ### Config File generator
 This generator is VERY basic and ugly. 
