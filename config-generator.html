@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Config Generator</title>
+    <title>Create Configuration File</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        .form-element {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Config Generator</h1>
-    <form id="configForm">
-        <label for="dbType">Database Type:</label><br>
-        <input type="text" id="dbType" name="dbType"><br>
-        <label for="dbPath">Database Path:</label><br>
-        <input type="text" id="dbPath" name="dbPath"><br>
-        <label for="onDuration">On Duration:</label><br>
-        <input type="number" id="onDuration" name="onDuration"><br>
-        <label for="pageTitle">Page Title:</label><br>
-        <input type="text" id="pageTitle" name="pageTitle"><br>
-        <!-- Add more fields as necessary -->
-        <input type="submit" value="Generate Config">
-    </form>
+    <h1>Create Configuration File</h1>
+    <div class="form-element">
+        <label for="database-path">Database Path:</label><br>
+        <input type="text" id="database-path" name="database-path">
+    </div>
+    <div class="form-element">
+        <label for="logging-software">Logging Software:</label><br>
+        <select id="logging-software" name="logging-software">
+            <option value="HRD">HRD</option>
+            <option value="N3FJP">N3FJP</option>
+            <option value="Log4OM">Log4OM</option>
+            <option value="N1MM">N1MM</option>
+            <option value="MacLoggerDX">MacLoggerDX</option>
+            <option value="CQRLog">CQRLog</option>
+        </select>
+    </div>
+    <!-- Add other form elements as necessary -->
+    <button id="generate">Generate Config File</button>
+    <h2>Configuration</h2>
+    <pre id="output"></pre>
+
     <script>
-        document.getElementById('configForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            let config = {
-                DBType: event.target.elements.dbType.value,
-                DBPath: event.target.elements.dbPath.value,
-                OnDuration: parseInt(event.target.elements.onDuration.value),
-                PageTitle: event.target.elements.pageTitle.value,
-                // Add more fields as necessary
-            };
-            let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(config));
-            let downloadAnchorNode = document.createElement('a');
-            downloadAnchorNode.setAttribute("href", dataStr);
-            downloadAnchorNode.setAttribute("download", "config.json");
-            document.body.appendChild(downloadAnchorNode); // required for firefox
-            downloadAnchorNode.click();
-            downloadAnchorNode.remove();
+        $(document).ready(function () {
+            $("#generate").click(function () {
+                var config = {
+                    databasePath: $("#database-path").val(),
+                    loggingSoftware: $("#logging-software").val()
+                    // Add other config elements as necessary
+                };
+
+                // Translate logging software to database type
+                switch (config.loggingSoftware) {
+                    case "HRD":
+                    case "N3FJP":
+                        config.databaseType = "Access";
+                        break;
+                    case "Log4OM":
+                    case "N1MM":
+                    case "MacLoggerDX":
+                        config.databaseType = "SQLite";
+                        break;
+                    case "CQRLog":
+                        config.databaseType = "MySQL";
+                        break;
+                    default:
+                        alert("Invalid logging software selected");
+                        return;
+                }
+
+                $("#output").text(JSON.stringify(config, null, 2));
+            });
         });
     </script>
 </body>
