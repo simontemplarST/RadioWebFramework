@@ -35,7 +35,7 @@ Three files have to be generated.
    - status.xml (To show on or off air status)
 
 What data creates those files? 
-   - The QSL or SQL like database your logger saves to. 
+   - The SQL or SQL like database your logger saves to. 
 
 Where is the data saved?
 - On the machine you are currently using for logging by default. You can also set it up to run on an external device, and then access the database over the network. 
