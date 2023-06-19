@@ -96,3 +96,10 @@ This generator is VERY basic and ugly.
     - If you would like more added please email me with your logging software's database backup or send me a snippet of the table structure. Thank you!
 - You can select where the database is located with the "Open Location" button.
 - Soon, there will be check boxes to select which additional columns you want displayed in your public web log aside from the required ones by the standard. 
+
+### How to install
+Pre-reqs: Go 1.20 or newer
+
+1. Clone the repo to your local machine. IE: `git clone git@github.com:simontemplarST/RadioWebFramework.git`
+2. Navigate to the repo in your terminal. IE: `cd RadioWebFramework`
+3. Execute `go get`
