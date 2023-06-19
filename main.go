@@ -219,8 +219,8 @@ func writeStatusRSS(status string, config Configuration) {
 }
 
 func publishNextEpisode(db *sql.DB, table string, contentColumn string) {
-	_, err := db.Exec("UPDATE " + table + " SET " + contentColumn + " = 'Off' WHERE "
-	contentColumn + " = 'On' LIMIT 1")
+	_, err := db.Exec("UPDATE " + table + " SET " + contentColumn + " = 'Off' WHERE " +
+		contentColumn + " = 'On' LIMIT 1")
 	if err != nil {
 		log.Fatal(err)
 	}
