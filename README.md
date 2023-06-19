@@ -18,10 +18,11 @@ This is more of an ideological framework than an actual software framework. We'r
 ## Things that haven't been set in stone yet. 
 Log.xml
 - Do we use a common domain structure? like `callsign.radio`? So all we have to do is put the callsign in a var statement then slap `.radio/log.xml` on the tail?
-- Do we offload the confirming to the "Confrim" server, and put metadata in the generated files for scrapers to index? 
+- Do we offload the confirming to the [Confrim](https://gist.github.com/simontemplarST/07a58a3fefc167178b58d8eebd8fb0c8) server, and put metadata in the generated files for scrapers to index? 
     - Would these servers communicate with each other and vote on the most accurate data?
 - Do we say find a way to implement ActivityPub?
 - Do we make everyone a part of a "WebRing" and source the data that way?
+
 Status.xml
 - I am wondering if current frequency, mode, and a freeform message should be added into the schema as well?
 
@@ -29,7 +30,7 @@ Status.xml
 
 
 Three files have to be generated. 
-   - log.`filename here` (the operators log in it's entirety) -in the demo case, it's using a markdown file to generate a hugo post- 
+   - log.`filename here` (the operators log in its entirety) -in the demo case, it's using a markdown file to generate a hugo post- 
    - log.xml (RSS feed for confirming contacts)
    - status.xml (To show on or off air status)
 
@@ -43,7 +44,7 @@ How do I get this uploaded?
 - You can use an FTP client, Syncthing (or similar), or if your web host has a RESTful API to upload files (Like mine does), you can use that as well.
 
 What if I'm not too technical?
-- That's the beauty of Open Source. it promotes creation of tool sets that interact with the framework. In the near future this can include full on GUI applicaions. 
+- That's the beauty of Open Source. it promotes creation of tool sets that interact with the framework. In the near future this can include full on GUI applications. 
 
 
 ### Schemas
@@ -85,7 +86,7 @@ log.xml
 </log>
 
 ```
-You can take the log.`filename here` And create it with what ever you'd like, as long as it's searachable, and public, showing your digital log in it's entirety. You can style it to your taste, or (eventuially) there will be templates you can use for all of the major platforms. 
+You can take the log.`filename here` And create it with what ever you'd like, as long as it's searchable, and public, showing your digital log in its entirety. You can style it to your taste, or (eventually) there will be templates you can use for all of the major platforms. 
 
 ### Config File generator
 This generator is VERY basic and ugly. 
