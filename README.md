@@ -73,7 +73,7 @@ log.xml
         <My_Cnty>My Country</My_Cnty>
         <CQz>CQ Zone</CQz>
         <Freq>frequency</Freq>
-        <My_Gridsquare>My Maindenhead Grid</My_Gridsquare>
+        <My_Gridsquare>My Maidenhead Grid</My_Gridsquare>
         <MY_State>My State</MY_State>
         <ITUz>OtherStation ITU Zone</ITUz>
         <Mode>Operating Mode</Mode>
