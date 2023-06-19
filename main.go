@@ -226,7 +226,7 @@ func publishNextEpisode(db *sql.DB, table string, contentColumn string) {
 	}
 }
 
-func main() {
+func LoadOpen() {
 	// Load Configuration
 	config, err := loadConfig("config.json")
 	if err != nil {
