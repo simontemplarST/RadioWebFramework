@@ -17,11 +17,13 @@ This is more of an ideological framework than an actual software framework. We'r
 
 ## Things that haven't been set in stone yet. 
 Log.xml
-- Do we use a common domain structure? like `callsign.radio`? So all we have to do is put the call sign in a var statement then slap `.radio/log.xml` on the tail?
-- Do we offload the confirming to the "Confrim" server, and put metadata in the generated files for scrapers to index? 
+
+- Do we use a common domain structure? like `callsign.radio`? So all we have to do is put the callsign in a var statement then slap `.radio/log.xml` on the tail?
+- Do we offload the confirming to the [Confrim](https://gist.github.com/simontemplarST/07a58a3fefc167178b58d8eebd8fb0c8) server, and put metadata in the generated files for scrapers to index? 
     - Would these servers communicate with each other and vote on the most accurate data?
 - Do we say find a way to implement ActivityPub?
 - Do we make everyone a part of a "WebRing" and source the data that way?
+
 Status.xml
 - I am wondering if current frequency, mode, and a freeform message should be added into the schema as well?
 
@@ -34,7 +36,7 @@ Three files have to be generated.
    - status.xml (To show on or off-air status)
 
 What data creates those files? 
-   - The QSL or SQL like database your logger saves to. 
+   - The SQL or SQL like database your logger saves to. 
 
 Where is the data saved?
 - On the machine you are currently using for logging by default. You can also set it up to run on an external device, and then access the database over the network. 
@@ -85,7 +87,8 @@ log.xml
 </log>
 
 ```
-You can take the log.`filename here` And create it with what ever you'd like, as long as it's searchable, and public, showing your digital log in its entirety. You can style it to your taste, or (eventually) there will be templates you can use for all the major platforms. 
+
+You can take the log.`filename here` And create it with what ever you'd like, as long as it's searchable, and public, showing your digital log in its entirety. You can style it to your taste, or (eventually) there will be templates you can use for all of the major platforms. 
 
 ### Config File generator
 This generator is VERY basic and ugly. 
