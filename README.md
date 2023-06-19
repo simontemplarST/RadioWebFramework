@@ -10,13 +10,14 @@ This is more of an ideological framework than an actual software framework. We'r
 
 ## What is still needed?
 - We need example databases from any and all Ham Radio logging programs. 
-    - Even if we say we already have them, send them in anyway. Never hurts to have multiple things to run against.
+    - Even if we say we already have them, send them in any ways. Never hurts to have multiple things to run against.
 - Development. If you are a software developer and like the idea. Follow the guidelines, and have fun! That's what the hobby is about.
 - Logging software integration
     - If you are a developer of a logging application, and want to have this in your logger, By all means, implement it! 
 
 ## Things that haven't been set in stone yet. 
 Log.xml
+
 - Do we use a common domain structure? like `callsign.radio`? So all we have to do is put the callsign in a var statement then slap `.radio/log.xml` on the tail?
 - Do we offload the confirming to the [Confrim](https://gist.github.com/simontemplarST/07a58a3fefc167178b58d8eebd8fb0c8) server, and put metadata in the generated files for scrapers to index? 
     - Would these servers communicate with each other and vote on the most accurate data?
@@ -32,7 +33,7 @@ Status.xml
 Three files have to be generated. 
    - log.`filename here` (the operators log in its entirety) -in the demo case, it's using a markdown file to generate a hugo post- 
    - log.xml (RSS feed for confirming contacts)
-   - status.xml (To show on or off air status)
+   - status.xml (To show on or off-air status)
 
 What data creates those files? 
    - The SQL or SQL like database your logger saves to. 
@@ -78,7 +79,7 @@ log.xml
         <ITUz>OtherStation ITU Zone</ITUz>
         <Mode>Operating Mode</Mode>
         <Name>OtherStation Operator Name</Name>
-        <OPERATOR>My Callsigh</OPERATOR>
+        <OPERATOR>My Call Sign</OPERATOR>
         <RST_Sent>RST Sent to OtherStation</RST_Sent>
         <RST_Rcvd>RST from OtherStation</RST_Rcvd>
         <State>OtherStation State</State>
@@ -86,11 +87,12 @@ log.xml
 </log>
 
 ```
+
 You can take the log.`filename here` And create it with what ever you'd like, as long as it's searchable, and public, showing your digital log in its entirety. You can style it to your taste, or (eventually) there will be templates you can use for all of the major platforms. 
 
 ### Config File generator
 This generator is VERY basic and ugly. 
 - It will have the major logging software listed in the "Logging Software" dropdown. 
-    - If you would like more added please send me an email with your logging software's database backup or send me a snippet of the table structure
+    - If you would like more added please email me with your logging software's database backup or send me a snippet of the table structure. Thank you!
 - You can select where the database is located with the "Open Location" button.
 - Soon, there will be check boxes to select which additional columns you want displayed in your public web log aside from the required ones by the standard. 
