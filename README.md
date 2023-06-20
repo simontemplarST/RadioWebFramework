@@ -30,12 +30,15 @@ Status.xml
 
 
 Three files have to be generated. 
-   - log.`filename here` (the operators log in its entirety) -in the demo case, it's using a markdown file to generate a hugo post- 
-   - log.xml (RSS feed for confirming contacts)
+   - log.`filename here` (the operators log in its entirety, likely an HTML file or markdown to be fed into a CMS of some sort.)
+   - log.adif (Likely wrapped in an RSS feed -or similar aggregation protocol- for confirming contacts)
    - status.xml (To show on or off air status)
 
 What data creates those files? 
    - The SQL or SQL like database your logger saves to. 
+
+How does the data get written? 
+- Ideally, there would be one large write at the first run of the application to get all of the previous data written to file, then after that each new contact just appends the appropriate data to the end of the file.
 
 Where is the data saved?
 - On the machine you are currently using for logging by default. You can also set it up to run on an external device, and then access the database over the network. 
@@ -58,34 +61,11 @@ status.xml
     <msg>Freeform message goes here</msg>
 </status>
 ```
-log.xml
-```xml
-<log>
-    <entry>
-        <Call>OtherStation Call</call>
-        <QSO_Date>UTC Date</QSO_Date>
-        <Time_On>UTC Time QSO Start</Time_On>
-        <Time_Off>UTC Time QSO End</Time_Off>
-        <Band>Band</Band>
-        <Cont>OtherStation Continent</Cont>
-        <Country>OtherStation Country</Country>
-        <DXCC>OtherStation Entity</DXCC>
-        <My_Cnty>My Country</My_Cnty>
-        <CQz>CQ Zone</CQz>
-        <Freq>frequency</Freq>
-        <My_Gridsquare>My Maidenhead Grid</My_Gridsquare>
-        <MY_State>My State</MY_State>
-        <ITUz>OtherStation ITU Zone</ITUz>
-        <Mode>Operating Mode</Mode>
-        <Name>OtherStation Operator Name</Name>
-        <OPERATOR>My Callsigh</OPERATOR>
-        <RST_Sent>RST Sent to OtherStation</RST_Sent>
-        <RST_Rcvd>RST from OtherStation</RST_Rcvd>
-        <State>OtherStation State</State>
-    </entry>
-</log>
-
+log.adi
+```adif
+<QSO_DATE:8>20220101 <TIME_ON:6>000000 <CALL:6>W1AW   <BAND:3>20m <MODE:3>SSB <RST_SENT:3>599 <RST_RCVD:3>599 <QSL_SENT:1>Y <QSL_RCVD:1>Y <COMMENT:10>Some comment
 ```
+
 You can take the log.`filename here` And create it with what ever you'd like, as long as it's searchable, and public, showing your digital log in its entirety. You can style it to your taste, or (eventually) there will be templates you can use for all of the major platforms. 
 
 ### Config File generator
