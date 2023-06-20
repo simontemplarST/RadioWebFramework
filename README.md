@@ -62,32 +62,10 @@ status.xml
     <msg>Freeform message goes here</msg>
 </status>
 ```
-log.xml
+log.adi
 ```xml
-<log>
-    <entry>
-        <Call>OtherStation Call</call>
-        <QSO_Date>UTC Date</QSO_Date>
-        <Time_On>UTC Time QSO Start</Time_On>
-        <Time_Off>UTC Time QSO End</Time_Off>
-        <Band>Band</Band>
-        <Cont>OtherStation Continent</Cont>
-        <Country>OtherStation Country</Country>
-        <DXCC>OtherStation Entity</DXCC>
-        <My_Cnty>My Country</My_Cnty>
-        <CQz>CQ Zone</CQz>
-        <Freq>frequency</Freq>
-        <My_Gridsquare>My Maidenhead Grid</My_Gridsquare>
-        <MY_State>My State</MY_State>
-        <ITUz>OtherStation ITU Zone</ITUz>
-        <Mode>Operating Mode</Mode>
-        <Name>OtherStation Operator Name</Name>
-        <OPERATOR>My Callsigh</OPERATOR>
-        <RST_Sent>RST Sent to OtherStation</RST_Sent>
-        <RST_Rcvd>RST from OtherStation</RST_Rcvd>
-        <State>OtherStation State</State>
-    </entry>
-</log>
+<QSO_DATE:8>20220101 <TIME_ON:6>000000 <CALL:6>W1AW   <BAND:3>20m <MODE:3>SSB <RST_SENT:3>599 <RST_RCVD:3>599 <QSL_SENT:1>Y <QSL_RCVD:1>Y <COMMENT:10>Some comment
+
 
 ```
 
